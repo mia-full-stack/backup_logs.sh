@@ -13,7 +13,7 @@ ARCHIVE="$BACKUP_DIR/$LOG_FILE-$DATE.tar.gz"
 tar -czf "$ARCHIVE" "$LOG_DIR/$LOG_FILE"
 
 # Создаем архив с сжатием
-tar -cvzf "$DEST_DIR/$ARCHIVE_NAME" -C "$BACKUP_FILE" .
+tar -cvzf "$TARGET_FILE/$ARCHIVE_NAME" -C "$BACKUP_FILE" .
 
 # Удаляем архивы старше 3 дней
 find "$TARGET_FILE" -name "backup_log_*.tar.gz" -mtime +3 -exec rm {} \;
